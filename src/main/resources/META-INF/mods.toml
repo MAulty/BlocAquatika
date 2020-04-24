@@ -1,18 +1,15 @@
-# This is an example mods.toml file. It contains the data relating to the loading mods.
-# There are several mandatory fields (#mandatory), and many more that are optional (#optional).
 # The overall format is standard TOML format, v0.5.0.
-# Note that there are a couple of TOML lists in this file.
 # Find more information on toml format here:  https://github.com/toml-lang/toml
 # The name of the mod loader type to load - for regular FML @Mod mods it should be javafml
-modLoader="javafml" #mandatory
+modLoader="javafml"
 loaderVersion="[31,)"
-[[mods]] #mandatory
+[[mods]]
 # The modid of the mod
-modId="bloc_aquatika" #mandatory
+modId="bloc_aquatika"
 # The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
-version="${file.jarVersion}" #mandatory
- # A display name for the mod
-displayName="Bloc Aquatika" #mandatory
+version="1.0.0a"
+displayName="Bloc Aquatika"
+
 # A URL to query for updates for this mod. See the JSON update specification <here>
 #updateJSONURL="http://myurl.me/" #optional
 # A URL for the "homepage" for this mod, displayed in the mod UI
@@ -24,6 +21,7 @@ displayName="Bloc Aquatika" #mandatory
 # A text field displayed in the mod UI
 #authors="Maulty/onesandzeros" #optional
 # The description text for the mod (multi line!) (#mandatory)
+
 description='''
 This mod seeks to spark life into the agriculture and fishing mechanics of minecraft.
 '''

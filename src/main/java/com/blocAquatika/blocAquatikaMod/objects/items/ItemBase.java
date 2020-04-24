@@ -1,4 +1,4 @@
-package com.blocAquatika.blocAquatikaMod.items;
+package com.blocAquatika.blocAquatikaMod.objects.items;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;

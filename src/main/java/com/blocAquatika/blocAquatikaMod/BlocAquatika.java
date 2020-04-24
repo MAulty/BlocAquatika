@@ -26,6 +26,7 @@ public class BlocAquatika
 
     private static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "bloc_aquatika";
+    public static BlocAquatika instance;
 
     public BlocAquatika() {
         // Register the setup method for modloading
@@ -33,8 +34,8 @@ public class BlocAquatika
         // Register the doClientStuff method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
+        instance = this;
         RegistryHandler.init();
-
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -46,4 +47,10 @@ public class BlocAquatika
     private void doClientStuff(final FMLClientSetupEvent event) {
 
     }
+
+    @SubscribeEvent
+    public void onServerStarting(FMLServerStartingEvent event){
+
+    }
+
 }
