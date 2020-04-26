@@ -11,7 +11,7 @@ public class StartupClientOnly {
     @SubscribeEvent
     public static void onClientSetupEvent(FMLClientSetupEvent event) {
         // Tell the renderer that the base is rendered using CUTOUT (but the base is actually invisible so it doesn't really matter...)
-        RenderTypeLookup.setRenderLayer(StartupCommon.lobster_trap, RenderType.getEntityCutout(new ResourceLocation("bloc_aquatika","blocks/lobster_trap")));
+        RenderTypeLookup.setRenderLayer(StartupCommon.lobster_trap, RenderType.getEntityCutout(new ResourceLocation("block_aquatika","lobster_trap.png")));
         // Register the custom renderer for our tile entity
         ClientRegistry.bindTileEntityRenderer(StartupCommon.tileEntityDataTypeLobster, LobsterModelTileEntityRenderer::new);
     }
