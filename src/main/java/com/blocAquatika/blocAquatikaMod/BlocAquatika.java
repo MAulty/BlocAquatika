@@ -1,8 +1,13 @@
 package com.blocAquatika.blocAquatikaMod;
 
+import com.blocAquatika.blocAquatikaMod.objects.blocks.lobster_trap.StartupClientOnly;
+import com.blocAquatika.blocAquatikaMod.objects.blocks.lobster_trap.StartupCommon;
 import com.blocAquatika.blocAquatikaMod.util.RegistryHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.model.obj.OBJLoader;
+import net.minecraftforge.client.model.obj.OBJModel;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -34,6 +39,7 @@ public class BlocAquatika
         // Register the doClientStuff method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
+        //OBJLoader.INSTANCE.loadModel(new OBJModel.ModelSettings(new ResourceLocation(MOD_ID + "block/lobster_trap.obj"), true,false,false,false, null));
         instance = this;
         RegistryHandler.init();
         // Register ourselves for server and other game events we are interested in
@@ -45,7 +51,7 @@ public class BlocAquatika
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
-
+        new StartupClientOnly().onClientSetupEvent(event);
     }
 
     @SubscribeEvent

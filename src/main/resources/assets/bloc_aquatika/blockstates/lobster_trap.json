@@ -1,0 +1,8 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {},
+    "model": "bloc_aquatika:lobster_trap.obj"
+  },
+  "variants": ""
+}

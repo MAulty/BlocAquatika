@@ -1,5 +1,7 @@
 {
   "item.bloc_aquatika.lobster": "Lobster",
+  "item.bloc_aquatika.lobster_trap": "Lobster Cage",
+  "block.bloc_aquatika.lobster_trap": "Lobster Cage",
   "item.bloc_aquatika.shell_sand": "Shell Sand",
   "block.bloc_aquatika.shell_sand": "Shell Sand"
 }
