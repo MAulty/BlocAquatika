@@ -1,10 +1,11 @@
 package com.blocAquatika.blocAquatikaMod;
 
-import com.blocAquatika.blocAquatikaMod.objects.blocks.lobster_trap.StartupClientOnly;
-import com.blocAquatika.blocAquatikaMod.objects.blocks.lobster_trap.StartupCommon;
+import com.blocAquatika.blocAquatikaMod.objects.blocks.ModBlocks;
 import com.blocAquatika.blocAquatikaMod.util.RegistryHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.obj.OBJLoader;
 import net.minecraftforge.client.model.obj.OBJModel;
@@ -24,6 +25,8 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.stream.Collectors;
 
+import static com.blocAquatika.blocAquatikaMod.objects.blocks.ModBlocks.lobster_trap;
+
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod("bloc_aquatika")
 public class BlocAquatika
@@ -39,7 +42,7 @@ public class BlocAquatika
         // Register the doClientStuff method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
-        //OBJLoader.INSTANCE.loadModel(new OBJModel.ModelSettings(new ResourceLocation(MOD_ID + "block/lobster_trap.obj"), true,false,false,false, null));
+
         instance = this;
         RegistryHandler.init();
         // Register ourselves for server and other game events we are interested in
@@ -51,7 +54,7 @@ public class BlocAquatika
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
-        new StartupClientOnly().onClientSetupEvent(event);
+        //new StartupClientOnly().onClientSetupEvent(event);
     }
 
     @SubscribeEvent
