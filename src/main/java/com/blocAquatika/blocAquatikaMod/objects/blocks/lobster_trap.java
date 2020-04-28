@@ -31,7 +31,7 @@ public class lobster_trap extends Block implements IGrowable//, IWaterLoggable
     public static final VoxelShape TOP_SHAPE = Block.makeCuboidShape(0.0D, 8.0D, 0.0D, 16.0D, 16.0D, 16.0D);
     public static final EnumProperty<SlabType> TYPE = BlockStateProperties.SLAB_TYPE;
 
-
+//
 
     public lobster_trap(Properties properties) {
         super(properties);
