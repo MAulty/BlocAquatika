@@ -1,33 +1,21 @@
 package com.blocAquatika.blocAquatikaMod;
 
-import com.blocAquatika.blocAquatikaMod.objects.blocks.ModBlocks;
+import com.blocAquatika.blocAquatikaMod.objects.blocks.lobster_trap;
 import com.blocAquatika.blocAquatikaMod.util.RegistryHandler;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.client.model.obj.OBJLoader;
-import net.minecraftforge.client.model.obj.OBJModel;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
-import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.stream.Collectors;
 
-import static com.blocAquatika.blocAquatikaMod.objects.blocks.ModBlocks.lobster_trap;
+import static net.minecraft.client.renderer.RenderType.getCutout;
 
-// The value here should match an entry in the META-INF/mods.toml file
 @Mod("bloc_aquatika")
 public class BlocAquatika
 {
@@ -45,6 +33,7 @@ public class BlocAquatika
 
         instance = this;
         RegistryHandler.init();
+
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -54,7 +43,8 @@ public class BlocAquatika
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
-        //new StartupClientOnly().onClientSetupEvent(event);
+        lobster_trap.INST.isOpaque(lobster_trap.BOTTOM_SHAPE);
+        RenderTypeLookup.setRenderLayer(lobster_trap.INST, getCutout());
     }
 
     @SubscribeEvent

@@ -5,8 +5,6 @@ import com.blocAquatika.blocAquatikaMod.objects.blocks.ModBlocks;
 import com.blocAquatika.blocAquatikaMod.objects.blocks.lobster_trap;
 import com.blocAquatika.blocAquatikaMod.objects.items.ItemBase;
 import net.minecraft.block.Block;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
@@ -23,9 +21,6 @@ public class RegistryHandler {
     public static void init() {
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
-        RenderTypeLookup.setRenderLayer(ModBlocks.lobster_trap, RenderType.getCutoutMipped());
-        //new StartupCommon().onBlocksRegistration(BLOCKS);
-        //new StartupCommon().onItemsRegistration(ITEMS);
     }
 
     //Blocks
