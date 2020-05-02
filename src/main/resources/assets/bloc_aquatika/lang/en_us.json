@@ -3,5 +3,11 @@
   "item.bloc_aquatika.lobster_trap": "Lobster Cage",
   "block.bloc_aquatika.lobster_trap": "Lobster Cage",
   "item.bloc_aquatika.shell_sand": "Shell Sand",
-  "block.bloc_aquatika.shell_sand": "Shell Sand"
+  "block.bloc_aquatika.shell_sand": "Shell Sand",
+  "item.bloc_aquatika.palm_log": "Palm Log",
+  "block.bloc_aquatika.palm_log": "Palm Log",
+  "item.bloc_aquatika.palm_leaves": "Palm Leaves",
+  "block.bloc_aquatika.palm_leaves": "Palm Leaves",
+  "item.bloc_aquatika.palm_sapling": "Palm Sapling",
+  "block.bloc_aquatika.palm_sapling": "Palm Sapling"
 }

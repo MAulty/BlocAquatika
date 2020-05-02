@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "bloc_aquatika:blocks/palm_log_end",
+    "side": "bloc_aquatika:blocks/palm_log_side"
+  }
+}

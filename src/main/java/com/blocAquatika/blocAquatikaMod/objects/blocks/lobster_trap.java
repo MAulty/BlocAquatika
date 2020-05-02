@@ -38,12 +38,12 @@ public class lobster_trap extends Block implements IGrowable//, IWaterLoggable
     }
 
     public lobster_trap(){
-        super(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD).notSolid());
+        super(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0F, 3.0F).sound(SoundType.WOOD));
     }
 
 
     public static boolean cannotAttach(Block blockIn) {
-        return blockIn instanceof LeavesBlock || blockIn == INST || blockIn == Blocks.CARVED_PUMPKIN || blockIn == Blocks.JACK_O_LANTERN || blockIn == Blocks.MELON || blockIn == Blocks.PUMPKIN || blockIn.isIn(BlockTags.SHULKER_BOXES);
+        return blockIn instanceof LeavesBlock || blockIn == INST || blockIn == Blocks.CARVED_PUMPKIN || blockIn == Blocks.JACK_O_LANTERN || blockIn == Blocks.MELON || blockIn == Blocks.PUMPKIN;
     }
 
 
@@ -86,7 +86,11 @@ public class lobster_trap extends Block implements IGrowable//, IWaterLoggable
         return true;
     }
 
-    @Override
+
+    public void func_225535_a_(ServerWorld p_225535_1_, Random p_225535_2_, BlockPos p_225535_3_, BlockState p_225535_4_) {
+
+    }
+
     public void grow(ServerWorld worldIn, Random rand, BlockPos pos, BlockState state) {
         int i = Math.min(3, state.get(AGE) + 1);
         worldIn.setBlockState(pos, state.with(AGE, Integer.valueOf(i)), 2);
