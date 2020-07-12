@@ -1,3 +1,6 @@
 {
-  "parent": "bloc_aquatika:block/palm_sapling"
+  "parent": "item/generated",
+  "textures": {
+    "": "bloc_aquatika:blocks/palm_sapling"
+  }
 }

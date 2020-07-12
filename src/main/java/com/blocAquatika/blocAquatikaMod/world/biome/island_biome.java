@@ -20,7 +20,18 @@ import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
 public class island_biome extends Biome {
 
     public island_biome(Builder builder){
-        super((new Biome.Builder()).surfaceBuilder(SurfaceBuilder.SHATTERED_SAVANNA, SurfaceBuilder.GRASS_DIRT_SAND_CONFIG).precipitation(Biome.RainType.RAIN).category(Category.OCEAN).depth(-1.0F).scale(0.3F).temperature(0.5F).downfall(0.5F).waterColor(9552895).waterFogColor(16777215).parent((String)null));
+        super((new Biome.Builder())
+                .surfaceBuilder(SurfaceBuilder.SHATTERED_SAVANNA,
+                        SurfaceBuilder.GRASS_DIRT_SAND_CONFIG)
+                .precipitation(Biome.RainType.RAIN)
+                .category(Category.OCEAN)
+                .depth(-1.0F)
+                .scale(0.3F)
+                .temperature(0.5F)
+                .downfall(0.5F)
+                .waterColor(9552895)
+                .waterFogColor(9552895)
+                .parent((String)null));
         this.addStructure(Feature.OCEAN_RUIN.withConfiguration(new OceanRuinConfig(OceanRuinStructure.Type.WARM, 0.3F, 0.9F)));
         this.addStructure(Feature.SHIPWRECK.withConfiguration(new ShipwreckConfig(false)));
         //this.addStructure(Feature.VILLAGE.withConfiguration(new VillageConfig(null,10)));
@@ -49,8 +60,15 @@ public class island_biome extends Biome {
         DefaultBiomeFeatures.addSprings(this);
 
 
-
-        this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.SIMPLE_RANDOM_SELECTOR.withConfiguration(new SingleRandomFeature(ImmutableList.of(Feature.CORAL_TREE.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG), Feature.CORAL_CLAW.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG), Feature.CORAL_MUSHROOM.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG)))).withPlacement(Placement.TOP_SOLID_HEIGHTMAP_NOISE_BIASED.configure(new TopSolidWithNoiseConfig(20, 400.0D, 0.0D,Heightmap.Type.OCEAN_FLOOR_WG))));
+        this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
+                Feature.SIMPLE_RANDOM_SELECTOR.withConfiguration(
+                        new SingleRandomFeature(
+                                ImmutableList.of(
+                                        Feature.CORAL_TREE.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG),
+                                        Feature.CORAL_CLAW.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG),
+                                        Feature.CORAL_MUSHROOM.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG))))
+                        .withPlacement(Placement.TOP_SOLID_HEIGHTMAP_NOISE_BIASED.configure(
+                                new TopSolidWithNoiseConfig(20, 400.0D, 0.0D,Heightmap.Type.OCEAN_FLOOR_WG))));
         DefaultBiomeFeatures.addTallSeagrassSparse(this);
         this.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.SEA_PICKLE.withConfiguration(new CountConfig(20)).withPlacement(Placement.CHANCE_TOP_SOLID_HEIGHTMAP.configure(new ChanceConfig(16))));
         DefaultBiomeFeatures.addFreezeTopLayer(this);

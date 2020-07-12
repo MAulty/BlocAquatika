@@ -18,7 +18,11 @@ import org.apache.logging.log4j.core.jmx.Server;
 import java.util.Random;
 import java.util.function.Supplier;
 
+
+
 public class palm_sapling extends BushBlock implements IGrowable {
+
+    public static palm_sapling INST = new palm_sapling(() -> new com.blocAquatika.blocAquatikaMod.world.feature.palm_tree(), Block.Properties.from(Blocks.OAK_SAPLING));
     public static final IntegerProperty STAGE = BlockStateProperties.STAGE_0_1;
     protected static final VoxelShape SHAPE = Block.makeCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 12.0D, 14.0D);
     private final Supplier<Tree> tree;
@@ -41,7 +45,6 @@ public class palm_sapling extends BushBlock implements IGrowable {
         if (worldIn.getLight(pos.up()) >= 9 && rand.nextInt(7) == 0) {
             this.grow(worldIn, pos, state, rand);
         }
-
     }
 
    public void grow(ServerWorld serverWorld, BlockPos pos, BlockState state, Random random){
