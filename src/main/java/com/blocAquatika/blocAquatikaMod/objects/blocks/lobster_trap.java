@@ -88,7 +88,7 @@ public class lobster_trap extends Block implements IGrowable//, IWaterLoggable
 
 
     public void func_225535_a_(ServerWorld p_225535_1_, Random p_225535_2_, BlockPos p_225535_3_, BlockState p_225535_4_) {
-
+//
     }
 
     public void grow(ServerWorld worldIn, Random rand, BlockPos pos, BlockState state) {
