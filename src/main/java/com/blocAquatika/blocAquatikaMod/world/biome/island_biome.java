@@ -1,5 +1,5 @@
 package com.blocAquatika.blocAquatikaMod.world.biome;
-
+/*
 import com.google.common.collect.ImmutableList;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
@@ -80,3 +80,4 @@ public class island_biome extends Biome {
         this.addSpawn(EntityClassification.MONSTER, new Biome.SpawnListEntry(EntityType.SPIDER, 100, 4, 4));
     }
 }
+*/

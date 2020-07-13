@@ -1,5 +1,5 @@
 package com.blocAquatika.blocAquatikaMod.world.feature;
-
+/*
 import com.blocAquatika.blocAquatikaMod.util.RegistryHandler;
 import com.blocAquatika.blocAquatikaMod.world.biome.island_biome_features;
 import net.minecraft.block.Blocks;
@@ -22,3 +22,4 @@ public class palm_tree extends Tree {
         return Feature.NORMAL_TREE.withConfiguration(island_biome_features.PALM_TREE_CONFIG);
     }
 }
+*/

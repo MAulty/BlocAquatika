@@ -1,5 +1,5 @@
 package com.blocAquatika.blocAquatikaMod.objects.blocks;
-
+/*
 import net.minecraft.block.*;
 import com.blocAquatika.blocAquatikaMod.world.feature.*;
 import net.minecraft.block.trees.Tree;
@@ -23,6 +23,7 @@ import java.util.function.Supplier;
 public class palm_sapling extends BushBlock implements IGrowable {
 
     public static palm_sapling INST = new palm_sapling(() -> new com.blocAquatika.blocAquatikaMod.world.feature.palm_tree(), Block.Properties.from(Blocks.OAK_SAPLING));
+    //^deprecated plz replace
     public static final IntegerProperty STAGE = BlockStateProperties.STAGE_0_1;
     protected static final VoxelShape SHAPE = Block.makeCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 12.0D, 14.0D);
     private final Supplier<Tree> tree;
@@ -49,17 +50,14 @@ public class palm_sapling extends BushBlock implements IGrowable {
 
    public void grow(ServerWorld serverWorld, BlockPos pos, BlockState state, Random random){
         if(state.get(STAGE) == 0){
-            serverWorld.setBlockState(pos, state.cycle(STAGE), 4);
+            serverWorld.setBlockState(pos, state.func_235896_a_(STAGE), 4);
         }else{
             if(!ForgeEventFactory.saplingGrowTree(serverWorld, random, pos))
                 return;
-            this.tree.get().func_225545_a_(serverWorld, serverWorld.getChunkProvider().getChunkGenerator(), pos, state, random);
+            this.tree.get().func_230339_a_(serverWorld, serverWorld.getChunkProvider().getChunkGenerator(), pos, state, random);
         }
    }
-
-    /**
-     * Whether this IGrowable can grow
-     */
+    //whether it can grow or not
     public boolean canGrow(IBlockReader worldIn, BlockPos pos, BlockState state, boolean isClient) {
         return true;
     }
@@ -75,5 +73,7 @@ public class palm_sapling extends BushBlock implements IGrowable {
     protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
         builder.add(STAGE);
     }
+
 }
+ */
 
